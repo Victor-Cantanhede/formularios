@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+
+        <p>
+            <label for="inum">Número: </label>
+
+            <!--
+            O atributo ONINPUT serve para incluir um comando de programação em JavaScript quando aquele input for preenchido.
+            -->
+            <input type="range" name="num" id="inum" min="0" max="20" oninput="ival.innerHTML = Number(inum.value)">
+
+            <output id="ival">5</output>
+        </p>
+
+        <p>
+            <label for="iano">Em que ano você nasceu? </label>
+            <input type="number" name="ano" id="iano" min="1900" max="2024" oninput="iidade.innerHTML = Number(2024) - Number(iano.value)">
+
+            <label for="iidade">Sua idade é: </label>
+            <output id="iidade">?</output>
+        </p>
+
+        <!--INPUT DE BOTÕES ENVIAR E LIMPAR-->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+</body>
+</html>
